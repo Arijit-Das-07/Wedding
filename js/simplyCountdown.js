@@ -142,24 +142,10 @@
             seconds,
             cd = document.querySelectorAll(elt);
 
-        targetTmpDate = new Date(
-            parameters.year,
-            parameters.month-2,
-            parameters.day+1,
-            parameters.hours+2,
-            parameters.minutes,
-            parameters.seconds
-        );
+        targetTmpDate = new Date("2023-05-10");
 
         if (parameters.enableUtc) {
-            targetDate = new Date(
-                targetTmpDate.getUTCFullYear(),
-                targetTmpDate.getUTCMonth(),
-                targetTmpDate.getUTCDate(),
-                targetTmpDate.getUTCHours(),
-                targetTmpDate.getUTCMinutes(),
-                targetTmpDate.getUTCSeconds()
-            );
+            targetDate = new Date("2023-05-10");
         } else {
             targetDate = targetTmpDate;
         }
