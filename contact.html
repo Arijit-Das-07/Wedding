@@ -141,42 +141,44 @@
 			</div>
 		</div>
 	</div>
-
-
 	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Are You Attending?</h2>
-					<p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
+					<p>Share Details to notify you that you're attending. Thanks!</p>
 				</div>
 			</div>
 			<div class="row animate-box">
 				<div class="col-md-10 col-md-offset-1">
-					<form class="form-inline">
-						<div class="col-md-4 col-sm-4">
+					<form class="form-inline" id="myForm">
+						<div class="col-md-3 col-sm-4">
 							<div class="form-group">
 								<label for="name" class="sr-only">Name</label>
-								<input type="name" class="form-control" id="name" placeholder="Name">
+								<input type="name" name="name" class="form-control" id="name" placeholder="Name">
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-4">
+						<div class="col-md-3 col-sm-4">
 							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email">
+								<label for="mobile_number" class="sr-only">Mobile Number</label>
+								<input type="mobile-number" name="mobile_number" class="form-control" id="mobile-number" placeholder="Mobile Number">
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-default btn-block">I am Attending</button>
+						<div class="col-md-3 col-sm-4">
+							<div class="form-group">
+								<label for="no_of_person" class="sr-only">No of Person</label>
+								<input type="no_of_person" name="no_of_person" class="form-control" id="no_of_person" placeholder="No Of Person">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-4">
+							<button onclick='SubForm()' class="btn btn-default btn-block">Submit</button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 			<div class="row copyright">
@@ -190,7 +192,7 @@
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
 							<li><a href="#"><i class="icon-facebook"></i></a></li>
 							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<li><a href="#"><i class="icon-heart2"></i></a></li>
 						</ul>
 					</p>
 				</div>
@@ -216,6 +218,26 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<!-- countTo -->
 	<script src="js/jquery.countTo.js"></script>
+
+	<script
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous">
+	</script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/cB0sx3LzAJZaNRBG/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("!!! Thank You !!!")
+				},
+				error: function(){
+					alert("!!! Thank You !!!")
+				}
+			});
+		}
+	</script>
 
 	<!-- Stellar -->
 	<script src="js/jquery.stellar.min.js"></script>
