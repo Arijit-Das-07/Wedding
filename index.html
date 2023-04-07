@@ -48,14 +48,16 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-2">
-					<div id="fh5co-logo"><a href="index.html">Wedding<strong>.</strong></a></div>
-					<audio controls loop autoplay hidden><source src="audio/music.mp3" type="audio/mpeg"></audio>
+					<div id="fh5co-logo">
+						<a href="index.html"><img class="img-circle border-0" width="150" height="150" src="images/logo.ico"/></a>
+					</div>
 				</div>
+				<audio  id="song" ><source src="audio/music.mp3" type="audio/mpeg"></audio>
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
 						<li class="active"><a href="index.html">Home</a></li>
 						<li><a href="about.html">Story</a></li>
-						<li class="has-dropdown">
+						<li class="has-dropdown active">
 							<a href="services.html">Event Details</a>
 							<ul class="dropdown">
 								<li><a href="haldi.html">Haldi Ceremony</a></li>
@@ -83,13 +85,10 @@
 							<br>
 							<br>
 							<br>
-							<h1>Arijit &amp; Susmita</h1>
-							<h2>We Are Getting Married</h2>
+							<h1>Arijit Weds Susmita</h1>
+							<h2>Finally It's Happening !!!</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
 							<p>
-								<ul class="fh5co-social-icons">
-									<li><a href="./"><i class="icon-heart2"></i></a></li>
-								</ul>
 							</p>
 						</div>
 					</div>
@@ -103,7 +102,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>Hello Everyone!</h2>
-					<p>We invited you to celebrate our wedding</p>
+					<p>We invite you to celebrate our wedding</p>
 					<!-- <h3>May 12th, 2023 Suri, Birbhum</h3>	 -->
 				</div>
 			</div>
@@ -114,7 +113,11 @@
 					</div>
 					<div class="desc-groom">
 						<h3>Arijit Das</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+						<p>What can I say, she is cool & amazing. Brilliant,
+							creative, and adventurous. I have always
+							been a bit shy,and she has shown me
+							a whole new side of life.
+						</p>
 					</div>
 				</div>
 				<p class="heart text-center"><i class="icon-heart2"></i></p>
@@ -124,7 +127,7 @@
 					</div>
 					<div class="desc-bride">
 						<h3>Susmita Chanda</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+						<p>I didn't expect him to be the one to support me through all of my highs and lows and hold me up for the way I am. He will always have my heart and soul.</p>
 					</div>
 				</div>
 			</div>
@@ -251,6 +254,12 @@
 					alert("!!! Thank You !!!")
 				}
 			});
+		}
+	</script>
+	<script>
+	var x = document.getElementById("song"); 
+		function playAudio() { 
+		  x.play(); 
 		}
 	</script>
 	<script>
