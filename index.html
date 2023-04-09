@@ -60,9 +60,9 @@
 						<li class="has-dropdown">
 							<a href="services.html">Event Details</a>
 							<ul class="dropdown">
-								<li><a href="haldi.html">Haldi Ceremony</a></li>
-								<li><a href="wedding.html">Wedding Ceremony</a></li>
-								<li><a href="reception.html">Reception Party</a></li>
+								<li><a href="services.html">Haldi Ceremony</a></li>
+								<li><a href="services.html">Wedding Ceremony</a></li>
+								<li><a href="services.html">Reception Party</a></li>
 							</ul>
 						</li>
 						<li><a href="gallery.html">Photos</a></li>
@@ -113,10 +113,8 @@
 					</div>
 					<div class="desc-groom">
 						<h3>Arijit Das</h3>
-						<p>What can I say, she is cool & amazing. Brilliant,
-							creative, and adventurous. I have always
-							been a bit shy,and she has shown me
-							a whole new side of life.
+						<p>She is Cool,Brilliant and adventurous. 
+							I have always been a bit shy,and she has shown me a whole new side of life.
 						</p>
 					</div>
 				</div>
@@ -149,7 +147,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_6.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
@@ -164,29 +162,54 @@
 						<div class="col-md-3 col-sm-4">
 							<div class="form-group">
 								<label for="name" class="sr-only">Name</label>
-								<input type="name" name="name" class="form-control" id="name" placeholder="Name">
+								<input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4">
 							<div class="form-group">
 								<label for="mobile_number" class="sr-only">Mobile Number</label>
-								<input type="mobile-number" name="mobile_number" class="form-control" id="mobile-number" placeholder="Mobile Number">
+								<input type="tel" name="mobile_number" class="form-control" id="mobile-number" pattern="[0-9]{10}" required placeholder="Mobile Number">
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-4">
+							<div class="form-group">
+								<label for="email" class="sr-only">Email ID</label>
+								<input type="email" name="email" class="form-control" id="no_of_person" placeholder="Gmail Id" placeholder="Enter Your gmail address"
+								pattern=".+@gmail.com" required>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4">
 							<div class="form-group">
 								<label for="no_of_person" class="sr-only">No of Person</label>
-								<input type="no_of_person" name="no_of_person" class="form-control" id="no_of_person" placeholder="No Of Person">
+								<input type="number" name="no_of_person" class="form-control" id="no_of_person" min=1 placeholder="No Of Person" required>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4">
-							<button onclick='SubForm()' class="btn btn-default btn-block">Submit</button>
+								<input id ="datetime" name="timestamp" hidden >
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-4">
+							<button onclick='SubForm()' type="submit" class="btn btn-default btn-block">Submit</button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous">
+	</script>
+	<script>
+	function SubForm (){
+		document.getElementById("datetime").value = new Date();
+		$.ajax({
+			url:"https://api.apispreadsheets.com/data/hX3sldMgr2OfnQdJ/",
+			type:"post",
+			data:$("#myForm").serializeArray()
+		});
+	}
+	</script>
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 
@@ -237,25 +260,8 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-	<script
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-		crossorigin="anonymous">
-	</script>
-	<script>
-		function SubForm (){
-			$.ajax({
-				url:"https://api.apispreadsheets.com/data/cB0sx3LzAJZaNRBG/",
-				type:"post",
-				data:$("#myForm").serializeArray(),
-				success: function(){
-					alert("!!! Thank You !!!")
-				},
-				error: function(){
-					alert("!!! Thank You !!!")
-				}
-			});
-		}
-	</script>
+	
+	
 	<script>
     var d = new Date("2023-05-10");
 
