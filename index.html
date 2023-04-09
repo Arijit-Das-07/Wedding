@@ -49,15 +49,15 @@
 			<div class="row">
 				<div class="col-xs-2">
 					<div id="fh5co-logo">
-						<a href="index.html"><img class="img-circle border-0" width="60" height="60" src="images/logo.ico"/></a>
+						<a href="index.html"><img class="img-circle border-0" width="70" height="70" src="images/logo.ico"/></a>
 					</div>
 				</div>
-				<audio  id="song" ><source src="audio/music.mp3" type="audio/mpeg"></audio>
+				<audio controls loop autoplay hidden><source src="audio/music.mp3" type="audio/mpeg"></audio>
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
 						<li class="active"><a href="index.html">Home</a></li>
 						<li><a href="about.html">Story</a></li>
-						<li class="has-dropdown active">
+						<li class="has-dropdown">
 							<a href="services.html">Event Details</a>
 							<ul class="dropdown">
 								<li><a href="haldi.html">Haldi Ceremony</a></li>
@@ -254,12 +254,6 @@
 					alert("!!! Thank You !!!")
 				}
 			});
-		}
-	</script>
-	<script>
-	var x = document.getElementById("song"); 
-		function playAudio() { 
-		  x.play(); 
 		}
 	</script>
 	<script>
