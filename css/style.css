@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 14px;
   padding: 30px 10px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(241,78,149);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #F14E95;
 }
 .fh5co-nav ul li.btn-cta a span {
-  background: #fff;
+  background: #F14E95;
   padding: 4px 20px;
   display: -moz-inline-stack;
   display: inline-block;
@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6, figure {
   box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
 }
 .fh5co-nav ul li.active > a {
-  color: #fff !important;
+  color: #81427cdc !important;
 }
 
 #fh5co-counter,
@@ -1577,11 +1577,11 @@ form label {
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i {
-  color: #fff;
-  background: #fff;
+  color: #F14E95;
+  background: #F14E95;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i::before, .fh5co-nav-toggle.fh5co-nav-white > i::after {
-  background: #fff;
+  background: #F14E95;
 }
 
 .fh5co-nav-toggle i::before {
